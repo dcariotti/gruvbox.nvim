@@ -103,11 +103,11 @@ colors.orange = orange
 local hls_cursor = utils.get_color_from_var(vim.g.gruvbox_hls_cursor, orange, colors)
 local hls_highlight = utils.get_color_from_var(vim.g.gruvbox_hls_highlight, yellow, colors)
 local number_column = utils.get_color_from_var(vim.g.gruvbox_number_column, nil, colors)
-local color_column = utils.get_color_from_var(vim.g.gruvbox_color_column, bg1, colors)
+local color_column = utils.get_color_from_var(vim.g.gruvbox_color_column, "#111111", colors)
 local vert_split = utils.get_color_from_var(vim.g.gruvbox_vert_split, bg0, colors)
 local tabline_sel = utils.get_color_from_var(vim.g.gruvbox_tabline_sel, green, colors)
 local sign_column = utils.get_color_from_var(vim.g.gruvbox_sign_column, bg1, colors)
-local cursor_line = utils.get_color_from_var(vim.g.gruvbox_cursor_line, bg1, colors)
+local cursor_line = utils.get_color_from_var(vim.g.gruvbox_cursor_line, nil, colors)
 
 local improved_strings_fg = fg1
 local improved_strings_bg = bg1
@@ -205,14 +205,14 @@ local base_group = {
   SignColumn = { bg = sign_column },
   IncSearch = { fg = hls_cursor, bg = bg0, reverse = vim.g.gruvbox_inverse },
   LineNr = { fg = bg4, bg = number_column },
-  CursorLineNr = { fg = yellow, bg = bg1 },
+  CursorLineNr = { fg = orange, bg = nil },
   MatchParen = { bg = bg3, bold = vim.g.gruvbox_bold },
   ModeMsg = { link = "GruvboxYellowBold" },
   MoreMsg = { link = "GruvboxYellowBold" },
   NonText = { link = "GruvboxBg2" },
   Normal = { fg = fg1, bg = bg0 },
-  Pmenu = { fg = fg1, bg = bg2 },
-  PmenuSel = { fg = bg2, bg = blue, bold = vim.g.gruvbox_bold },
+  Pmenu = { fg = "#ecf0f1", bg = "#222f3d" },
+  PmenuSel = { fg = "#f1c40f", bg = "#000000", bold = vim.g.gruvbox_bold },
   PmenuSbar = { bg = bg2 },
   PmenuThumb = { bg = bg4 },
   Question = { link = "GruvboxOrangeBold" },
@@ -228,13 +228,13 @@ local base_group = {
     bold = vim.g.gruvbox_bold,
     italic = vim.g.gruvbox_italic,
   } or { link = "GruvboxBlueUnderline" },
-  StatusLine = { fg = bg2, bg = fg1, reverse = vim.g.gruvbox_inverse },
-  StatusLineNC = { fg = bg1, bg = fg4, reverse = vim.g.gruvbox_inverse },
+  StatusLine = { fg = colors.dark0, bg = "#ecf0f1", reverse = vim.g.gruvbox_inverse },
+  StatusLineNC = { fg = colors.dark0, bg = "#2c3e50", reverse = vim.g.gruvbox_inverse },
   TabLineFill = { fg = bg4, bg = bg1, reverse = vim.g.gruvbox_invert_tabline },
   TabLine = { link = "TabLineFill" },
   TabLineSel = { fg = tabline_sel, bg = bg1, reverse = vim.g.gruvbox_invert_tabline },
   Title = { link = "GruvboxGreenBold" },
-  Visual = { bg = bg3, reverse = vim.g.gruvbox_invert_selection },
+  Visual = { bg = "#fbf1c7", fg = "#d65d0e", reverse = vim.g.gruvbox_invert_selection },
   VisualNOS = { link = "Visual" },
   WarningMsg = { link = "GruvboxRedBold" },
   WildMenu = { fg = blue, bg = bg2, bold = vim.g.gruvbox_bold },
