@@ -234,7 +234,7 @@ local base_group = {
   TabLine = { link = "TabLineFill" },
   TabLineSel = { fg = tabline_sel, bg = bg1, reverse = vim.g.gruvbox_invert_tabline },
   Title = { link = "GruvboxGreenBold" },
-  Visual = { bg = "#d65d0e", fg = "#fbf1c7", reverse = vim.g.gruvbox_invert_selection },
+  Visual = { bg = "#d65d0e", fg = colors.dark0, reverse = vim.g.gruvbox_invert_selection },
   VisualNOS = { link = "Visual" },
   WarningMsg = { link = "GruvboxRedBold" },
   WildMenu = { fg = blue, bg = bg2, bold = vim.g.gruvbox_bold },
