@@ -1,7 +1,7 @@
 -- gruvbox palette
 return {
   dark0_hard = "#1d2021",
-  dark0 = "#080808",
+  dark0 = "#000000",
   dark0_soft = "#32302f",
   dark1 = "#3c3836",
   dark2 = "#504945",
